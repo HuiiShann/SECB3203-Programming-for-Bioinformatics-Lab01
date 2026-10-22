@@ -1,22 +1,35 @@
 """Environment report used in Lab 1 and in every project README."""
+import importlib.metadata
 import platform
-from importlib import metadata
+import sys
 
 PACKAGES = ("numpy", "pandas", "matplotlib", "scikit-learn", "biopython", "pytest")
 
 
-def package_version(name: str) -> str | None:
-    """Return the installed version of a package, or None if it is missing."""
-    raise NotImplementedError("TODO: implement package_version")
+def package_version(name: str):
+    """Return the installed version string of a package, or None if not installed."""
+    try:
+        return importlib.metadata.version(name)
+    except importlib.metadata.PackageNotFoundError:
+        return None
 
 
-def check_environment(packages: tuple[str, ...] = PACKAGES) -> dict:
-    """Return the Python version, operating system and package versions."""
-    raise NotImplementedError("TODO: implement check_environment")
+def check_environment(packages=PACKAGES):
+    """Return a dictionary containing Python version, system platform, and requested package versions."""
+    return {
+        "python": platform.python_version(),
+        "platform": platform.system(),
+        "packages": {pkg: package_version(pkg) for pkg in packages},
+    }
 
 
 if __name__ == "__main__":
     report = check_environment()
-    print("Python:", report["python"], "on", report["platform"])
-    for name, version in report["packages"].items():
-        print(f"  {name:<14} {version or 'NOT INSTALLED'}")
+    print("=== Environment Report ===")
+    print(f"Python Version : {report['python']}")
+    print(f"Platform       : {report['platform']}")
+    print("Packages       :")
+    for pkg, ver in report["packages"].items():
+        print(f"  {pkg}: {ver}")
+
+    sys.exit(0)
