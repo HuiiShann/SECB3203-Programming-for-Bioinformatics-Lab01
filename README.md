@@ -5,24 +5,24 @@ Student: <TAN HUI SHAN, A24CS0197>
 ## Setup
 Windows (PowerShell)
 
-- Create virtual environment
+- Create virtual environment: 
 python -m venv .venv
 
-- Activate virtual environment (PowerShell)
+- Activate virtual environment (PowerShell): 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 .\.venv\Scripts\activate
 
-- Install required packages
+- Install required packages: 
 pip install -r requirements.txt
 
 ## Run
-- Run unit tests
+- Run unit tests: 
 python -m pytest
 
-- Run code style linter
+- Run code style linter: 
 ruff check src
 
-- Generate environment report output
+- Generate environment report output: 
 python src/env_check.py > results/environment_report.txt
 
 ## What is in this repository
@@ -53,4 +53,4 @@ python src/env_check.py > results/environment_report.txt
 13 README.md: Project documentation covering setup, execution commands, repository structure, and Git policies.
 
 ## What is not committed, and why
-<\We ignore .venv/ and results/ using .gitignore to ensure the repository remains small and portable across different operating systems. Uploading Windows-bound virtual environment files causes errors on Mac or Linux machines where users should instead build a fresh environment using requirements.txt. Besides, tracking dynamic output files clutters commit logs and causes merge conflicts when generated results vary.
+We ignore .venv/ and results/ using .gitignore to ensure the repository remains small and portable across different operating systems. Uploading Windows-bound virtual environment files causes errors on Mac or Linux machines where users should instead build a fresh environment using requirements.txt. Besides, tracking dynamic output files clutters commit logs and causes merge conflicts when generated results vary.
