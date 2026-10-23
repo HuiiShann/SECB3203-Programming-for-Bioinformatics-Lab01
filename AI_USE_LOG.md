@@ -14,7 +14,7 @@ Anthropic (2026). Claude (Claude Sonnet 5.5). Retrieved 23 October 2026 from htt
 ## Declaration (tick exactly one)
 
 - [ ] NIL RETURN: I did not use any generative AI tool for this assessment.
-- [/] I used AI. Every interaction that influenced my work is logged below. The log is true and complete.
+- [x] I used AI. Every interaction that influenced my work is logged below. The log is true and complete.
 
 ## Entry 1
 
