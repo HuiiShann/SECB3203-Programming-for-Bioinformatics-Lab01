@@ -1,6 +1,6 @@
 # SECB3203 Lab 1 - Python fundamentals and a reproducible project
 
-Student: <TAN HUI SHAN, A24CS0197>
+Student: TAN HUI SHAN, A24CS0197
 
 ## Setup
 Windows (PowerShell)

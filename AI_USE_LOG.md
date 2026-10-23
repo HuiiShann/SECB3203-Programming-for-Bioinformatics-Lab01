@@ -3,12 +3,13 @@
 <!-- SECB3203 prompt log. Policy: PROPOSED - for approval by the SECB3203 course team before circulation to students. Fill in, then run: python tools/check_ai_log.py AI_USE_LOG.md --assessment <key> -->
 
 - Course: SECB3203
-- Assessment: <Lab 01>
-- Student name: <Tan Hui Shan>
-- Matric no: <A24CS0197>
-- Group ID: <n/a>
-- AI level: <1>
-- Tools cited: <Google. (2026). Gemini (Version 1.5 / 2.0) [Large language model]. Retrieved 23 October from https://gemini.google.com> <Anthropic (2026). Claude (Claude Sonnet 5.5). Retrieved 23 October 2026 from https://claude.ai>
+- Assessment: Lab 01
+- Student name: Tan Hui Shan
+- Matric no: A24CS0197
+- Group ID: n/a
+- AI level: 1
+- Tools cited: Google. (2026). Gemini (Version 1.5 / 2.0) [Large language model]. Retrieved 23 October from https://gemini.google.com , 
+Anthropic (2026). Claude (Claude Sonnet 5.5). Retrieved 23 October 2026 from https://claude.ai
 
 ## Declaration (tick exactly one)
 
@@ -36,7 +37,7 @@
 - Prompt: "How if I using python 3.15?"
 - Output: Claude explained that using an unreleased or experimental Python version (like Python 3.15) causes pip installation failures because pre-compiled binary wheels (.whl) for packages like numpy and pandas do not yet exist on PyPI, forcing pip into a failed source build. Claude advised uninstalling the existing Python installation and downloading/installing Python 3.14 64-bit directly from https://www.python.org.
 - Verified by: Navigated to the official Python downloads page, verified the Windows installer architecture details, and confirmed package support.
-My change: Followed the advice directly: uninstalled the previous Python version, downloaded and installed Python 3.14 64-bit from python.org, recreated .venv, and successfully installed all project dependencies.
+- My change: Followed the advice directly: uninstalled the previous Python version, downloaded and installed Python 3.14 64-bit from python.org, recreated .venv, and successfully installed all project dependencies.
 - Used in: Environment setup and interpreter configuration (Task 1). Not used directly as code in src/ or tests/.
 
 ## Entry 3
